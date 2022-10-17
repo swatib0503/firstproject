@@ -63,5 +63,24 @@ public void ThirdLoginTest() throws IOException, InterruptedException {
 		login2.ClickonLoginbtn();
 		test.log(Status.PASS, "Clicked on login button");
 	}
+	
+	@Test
+	public void ForthLoginTest() throws IOException, InterruptedException {
+			
+			
+			driver.get(baseURL);
+			test = extent.createTest("Verify Application Login");
+			LoginPage login2 = new LoginPage(driver);	
+			login2.SetUserID(Exeldata.getdata(3, 0));
+			test.log(Status.PASS, "Username successfully entered");
+			
+			login2.SetPassword(Exeldata.getdata(3, 1));
+			test.log(Status.PASS, "Password successfully entered");
+			
+			Thread.sleep(2000);
+			
+			login2.ClickonResetbtn();
+			test.log(Status.PASS, "Clicked on reset button");
+		}
 
 }
