@@ -77,10 +77,7 @@ public void ThirdLoginTest() throws IOException, InterruptedException {
 			login2.SetPassword(Exeldata.getdata(3, 1));
 			test.log(Status.PASS, "Password successfully entered");
 			
-			Thread.sleep(2000);
 			
-			login2.ClickonResetbtn();
-			test.log(Status.PASS, "Clicked on reset button");
 		}
 
 }
